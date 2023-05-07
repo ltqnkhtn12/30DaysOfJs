@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #333;
+            font-family: sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        
+        h1 {
+            text-align: center;
+            color: aqua;
+            padding-top: 10px;
+            font-style: italic;
+            animation-name: example;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes example {
+            0%   {color: red;}
+            10%  {color: yellow;}
+            20%  {color: blue;}
+            30% {color: green;}
+            40%   {color: purple;}
+            50%  {color: orangered;}
+            60%  {color: white;}
+            70% {color: fuchsia;}
+            80%  {color: peru;}
+            90% {color: rosybrown;}
+            100%  {color: olivedrab;}
+}
+    </style>
+</head>
+<body>
+    <h1>30 Days Of JavaScript - Day 7</h1>
+    
+    <script>
+        //Exercises: Level 1
+
+        //1.Declare a function fullName and it print out your full name.
+
+        function fullName() {
+
+        }
+
+        fullName()
+
+        //2.Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
+
+        function print_full_Name() {
+            let firstName = "Nhu"
+            let space = " "
+            let lastName = "Nhu"
+            let fullName = firstName+space+lastName
+            console.log(fullName)
+        }
+
+        print_full_Name()
+        
+        //3.Declare a function addNumbers and it takes two two parameters and it returns sum.
+        function addNumbers() {
+            let x = 5;
+            let y = 6;
+            let sum = x+y;
+            console.log(sum)
+        }
+        addNumbers()
+
+
+       // 4.An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
+       function areaOfRectangle() {
+        let length = 5;
+        let width = 4;
+        let area = length * width;
+        console.log(area)
+       }
+
+       areaOfRectangle()
+
+       //5.A perimeter of a rectangle is calculated as follows: perimeter= 2x(length + width). Write a function which calculates perimeterOfRectangle.
+       function perimeterOfRectangle() {
+        let length = 4;
+        let width = 3;
+        let perimeter = (length+width)*2
+        console.log(perimeter)
+       }
+       perimeterOfRectangle()
+
+       //6.A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
+       function volumeOfRectPrism() {
+        let length = 7;
+        let width = 5;
+        let height = 5;
+        let volume = length*width*height;
+        console.log(volume)
+       }
+       volumeOfRectPrism()
+
+       //7.Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+       function areaOfCircle() {
+        let pi = 3.14;
+        let radius = 4;
+        let area = pi*radius*radius;
+        console.log(area);
+       }
+       areaOfCircle()
+
+       //8.Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
+       function circumOfCircle() {
+        let pi = 3.14;
+        let radius = 4;
+        let circumference= 2*pi*radius;
+        console.log(circumference);
+       }
+       circumOfCircle()
+
+       //9.Density of a substance is calculated as follows:density= mass/volume. Write a function which calculates density.
+       function density()  {
+        let mass = 10;
+        let volume = 2;
+        let density = mass/volume;
+        console.log(density);
+       }
+       density()
+
+       //10.Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a function which calculates a speed of a moving object, speed.
+       function speed() {
+        let S = 60;
+        let t = 2;
+        let speed = S*t;
+        console.log(speed)
+       }
+       speed()
+
+       //11.Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+       function weight() {
+        let mass = 100;
+        let gravity = 2;
+        let weight = mass/gravity;
+        console.log(weight);
+       }
+       weight()
+
+       //12.Temperature in oC can be converted to oF using this formula: oF = (oC x 9/5) + 32. Write a function which convert oC to oF convertCelsiusToFahrenheit.
+       function convertCelsiusToFahrenheit() {
+        let oC = 35;
+        let oF = (oC*9/5)+32;
+        console.log(oF);
+       }
+       convertCelsiusToFahrenheit()
+
+       //13.Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+       function bmi() {
+        let height = Number(prompt('Enter height in m2'));
+        let weight = Number(prompt('Enter weight in Kg'));
+        let BMI = weight*(height*height);
+
+        if (BMI<18.5) {
+            console.log(`Your BMI is ${BMI}. Your BMI is less than 18.5. You underweight.`)
+        } else if (BMI>=18.5&&BMI<=24.9) {
+            console.log(`Your BMI is ${BMI}. Your BMI is 18.5 to 24.9. You have normal weight.`)
+        } else if (BMI>=25&&BMI<=29.9) {
+            console.log(`Your BMI is ${BMI}. Your BMI is 25 to 29.9. You overweight.`)
+        } else {
+            console.log(`Your BMI is ${BMI}. Your BMI is 30 or more. You obese.`)
+        }
+       }
+       bmi()
+
+       //14.Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+       function checkSeason() {
+        let month = Number(prompt('Enter current month: '))
+
+        if (month==12||month==1||month==2) {
+            console.log("The current season is Winter")
+        } else if (month==3||month==4||month==5) {
+            console.log("The current season is Spring")
+        } else if (month==6||month==7||month==9) {
+            console.log("The current season is Spring")
+        } else {
+            console.log("The current season Autumn")
+        }
+       }
+       checkSeason()
+
+       //15.Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+       function findMax(a,b,c) {
+        console.log(Math.max(a,b,c))
+       }
+
+       findMax(0,10,5);
+
+       //Exercises: Level 2
+
+       //1.Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+
+       //2.Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+       function solveQuadratic(a,b,c) {
+        // calculate discriminant
+        let discriminant = b * b - 4 * a * c;
+        // condition for real and different roots
+        if (discriminant > 0) {
+             root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+             root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+             // result
+             console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+            }
+            // condition for real and equal roots
+            else if (discriminant == 0) {
+                root1 = root2 = -b / (2 * a);
+                // result
+                console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+            }
+            // if roots are not real
+            else {
+                let realPart = (-b / (2 * a)).toFixed(2);
+                let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+                // result
+                console.log(`The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`);
+            }
+        }
+
+        console.log(solveQuadratic()) // {0}
+        console.log(solveQuadratic(1, 4, 4)) // {-2}
+        console.log(solveQuadratic(1, -1, -2)) // {2, -1}
+        console.log(solveQuadratic(1, 7, 12)) // {-3, -4}
+        console.log(solveQuadratic(1, 0, -4)) //{2, -2}
+        console.log(solveQuadratic(1, -1, 0)) //{1, 0}
+
+        //3.Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+       const printArray = (...arrs) => {
+        console.log(arrs)
+       }
+       printArray(1,2,3,4,5)
+
+       //4.Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+       function showDateTime() {
+        let now = new Date();
+        let date = now.getDate()
+        
+        if (date<10) {
+            date = "0" + date
+        }
+
+        let month = now.getMonth()
+
+        if (month<10) {
+            month = "0"+month
+        }
+
+        let years = now.getFullYear()
+        let hour = now.getHours() 
+
+        if (hour<10){
+            hour = "0" + hour;
+        }
+
+        let minute = now.getMinutes()
+
+        if (minute.length==1) {
+            minute = "0" + minute
+        }
+
+        console.log(`${date}/${month}/${years}\t${hour}:${minute}`)
+       }
+
+       showDateTime()
+
+       //5.Declare a function name swapValues. This function swaps value of x to y.
+       function swapValues(x,y) {
+        var a=x;
+        x=y;
+        y=a;
+        console.log(`(${x},${y})x=>${x},y=>${y}`)
+       }
+
+       swapValues(3,4)
+
+       //6.Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+       function reverseArr(input) {
+        var ret = new Array;
+        for(var i = input.length-1; i >= 0; i--) {
+        ret.push(input[i]);}
+        return ret;
+    }
+    var a = [3,5,7,8]
+    var b = ['A', 'B', 'C']
+    console.log(reverseArr(a));
+    console.log(reverseArr(b));
+
+    //7.Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+    const capitalizeArray = arr => {
+        const newArr = []
+        for (const element of arr) {
+            newArr.push(element.toUpperCase())
+        }
+        return newArr
+    }
+    const names = ['nhu','quyen','thuan','my','ngan']
+    console.log(capitalizeArray(names))
+
+    //8.Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+    const addItem =['Cho','Meo']
+    addItem.push('Ga','Vit')
+    console.log(addItem)
+
+    //9.Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+    const removeItem = ['Quyen','Nhu',"Thuan",'My','Huynh','Dang']
+    const newItem = removeItem.filter(m => {
+        return m!=="Nhu"
+    })
+    console.log(newItem)
+
+   
+    </script>
+</body>
+</html>
